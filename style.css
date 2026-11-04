@@ -1,60 +1,91 @@
 :root {
-    --bg-color: #0d0d0d;
-    --box-bg: #1a1a1a;
+    /* Palet Warna Baru: Cyan, Putih, Hijau Muda, & Hint Kuning */
+    --bg-gradient: linear-gradient(135deg, #0a192f 0%, #06283d 100%);
+    --box-bg: rgba(255, 255, 255, 0.05);
+    --box-border: rgba(0, 255, 204, 0.3);
     --text-main: #ffffff;
-    --text-muted: #e0e0e0;
-    --gold: #d4af37;
-    --gold-hover: #f1c40f;
+    --text-muted: #e0fbfc;
+    
+    /* Aksen Warna */
+    --cyan: #00f2fe;
+    --green-light: #4facfe;
+    --hint-yellow: #f6d365;
+    --grad-primary: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    --grad-button: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
+    background: var(--bg-gradient);
     color: var(--text-main);
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .curved-box {
-    background-color: var(--box-bg);
-    border: 2px solid var(--gold);
+    background: var(--box-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--box-border);
     border-radius: 24px;
-    padding: 20px;
+    padding: 24px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.curved-box:hover {
+    border-color: var(--cyan);
+    transform: translateY(-2px);
 }
 
 header {
     text-align: center;
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, rgba(79, 172, 254, 0.1) 100%);
+    border: 1px solid var(--cyan);
 }
 
 header h1 {
-    color: var(--gold);
+    background: var(--grad-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 5px;
+    font-size: 2.2rem;
+}
+
+header p {
+    color: var(--hint-yellow);
+    font-weight: 500;
 }
 
 nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 nav button {
-    background-color: transparent;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    border-radius: 12px;
-    padding: 10px 20px;
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--cyan);
+    border-radius: 14px;
+    padding: 12px 22px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.1);
 }
 
 nav button:hover {
-    background-color: var(--gold);
-    color: var(--bg-color);
+    background: var(--grad-button);
+    color: #0a192f;
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+    transform: scale(1.05);
 }
 
 .hidden {
@@ -63,56 +94,89 @@ nav button:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
 .card h3 {
-    color: var(--gold);
+    background: var(--grad-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: var(--text-muted);
 }
 
 .alur-box {
-    background-color: #262626;
+    background: rgba(0, 242, 254, 0.03);
     text-align: center;
     font-size: 1.1em;
+    border-left: 4px solid var(--cyan);
+}
+
+.alur-box strong {
+    color: var(--hint-yellow);
 }
 
 .question-block {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .question-block p {
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--text-main);
 }
 
 .options label {
     display: block;
-    margin: 8px 0;
+    margin: 10px 0;
     cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    color: var(--text-muted);
+}
+
+.options label:hover {
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--text-main);
 }
 
 .gold-btn {
-    background-color: var(--gold);
-    color: var(--bg-color);
+    background: var(--grad-button);
+    color: #0a192f;
     border: none;
-    border-radius: 12px;
-    padding: 12px 24px;
+    border-radius: 14px;
+    padding: 14px 24px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
 }
 
 .gold-btn:hover {
-    background-color: var(--gold-hover);
+    opacity: 0.9;
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.5);
+    transform: translateY(-2px);
 }
 
 #result {
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
     font-weight: bold;
-    color: var(--gold);
+    color: var(--hint-yellow);
+    background: rgba(246, 211, 101, 0.1);
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px dashed var(--hint-yellow);
 }
