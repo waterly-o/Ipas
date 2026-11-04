@@ -1,82 +1,19 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Human Body Explorer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="curved-box">
-        <h1>Digital Human Body Explorer</h1>
-        <p>Proyek Edukasi Interaktif | Azzam Al Fawwaz Banyu Prasetyo</p>
-    </header>
 
-    <nav class="curved-box">
-        <button onclick="showSection('saraf')">Sistem Saraf</button>
-        <button onclick="showSection('gerak')">Sistem Gerak</button>
-        <button onclick="showSection('alur')">Alur Gerak</button>
-        <button onclick="showSection('kuis')">Kuis Interaktif</button>
-    </nav>
-
-    <main>
-        <!-- Bagian Sistem Saraf -->
-        <section id="saraf" class="content-section active curved-box">
-            <h2>Sistem Saraf Manusia</h2>
-            <div class="grid-container">
-                <div class="card curved-box">
-                    <h3>Otak</h3>
-                    <p>Pusat pengolahan informasi dan koordinasi tubuh. Mengatur pikiran, memori, dan memproses informasi sensorik.</p>
-                </div>
-                <div class="card curved-box">
-                    <h3>Sumsum Tulang Belakang</h3>
-                    <p>Jalur penghantar impuls saraf dari saraf tepi ke otak dan pusat pengendali gerak refleks tertentu.</p>
-                </div>
-                <div class="card curved-box">
-                    <h3>Saraf Tepi</h3>
-                    <p>Menghubungkan sistem saraf pusat (otak dan sumsum tulang belakang) ke seluruh bagian tubuh dan organ.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bagian Sistem Gerak -->
-        <section id="gerak" class="content-section hidden curved-box">
-            <h2>Sistem Gerak Manusia</h2>
-            <div class="grid-container">
-                <div class="card curved-box">
-                    <h3>Tulang</h3>
-                    <p>Memberikan bentuk tubuh, menopang berat badan, dan melindungi organ vital di dalam tubuh.</p>
-                </div>
-                <div class="card curved-box">
-                    <h3>Sendi</h3>
-                    <p>Menghubungkan antara dua tulang atau lebih agar tulang dapat bergerak secara fleksibel.</p>
-                </div>
-                <div class="card curved-box">
-                    <h3>Otot</h3>
-                    <p>Sebagai alat gerak aktif yang berkontraksi dan berelaksasi untuk menggerakkan bagian tubuh.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bagian Alur Gerak -->
-        <section id="alur" class="content-section hidden curved-box">
-            <h2>Hubungan Sistem Saraf dan Gerak</h2>
-            <p>Rangsangan diterima oleh reseptor, informasi diteruskan melalui jalur saraf dan diproses, lalu respons dihasilkan melalui efektor seperti otot.</p>
-            <div class="alur-box curved-box">
-                <h3>Alur Gerak Refleks (Cepat & Otomatis)</h3>
-                <p>Rangsangan &rarr; Reseptor &rarr; Saraf Sensorik &rarr; <strong>Sumsum Tulang Belakang</strong> &rarr; Saraf Motorik &rarr; Efektor (Otot)</p>
-            </div>
-        </section>
-
-        <!-- Bagian Kuis Interaktif -->
-        <section id="kuis" class="content-section hidden curved-box">
-            <h2>Kuis Interaktif</h2>
-            <div id="quiz-container"></div>
-            <button id="submit-btn" class="gold-btn" onclick="calculateScore()">Kirim Jawaban</button>
-            <div id="result" class="hidden"></div>
-        </section>
-    </main>
-
-    <script src="Script.js"></script>
-</body>
-</html>
+Action: view_file({"path":"/app/index.html","view_range":[14,28]})
+Observation: [Showing lines 14-28 of 85 total] /app/index.html:
+14|        <div class="eyebrow"><span class="eyebrow-dot"></span> Belajar IPAS dengan cara yang menyenangkan</div>
+15|        <h1>Digital Human<br><em>Body Explorer</em></h1>
+16|        <p>Jelajahi cara tubuh manusia menerima informasi, bergerak, dan merespons dunia di sekitarnya.</p>
+17|        <div class="hero-meta"><span class="meta-icon">✦</span> Proyek edukasi interaktif <span class="meta-divider"></span> Azzam Al Fawwaz Banyu Prasetyo</div>
+18|    </header>
+19|
+20|    <nav class="curved-box navigation" aria-label="Navigasi materi" data-testid="main-navigation">
+21|        <button class="nav-button active" data-section="saraf" data-testid="nav-saraf-button" onclick="showSection('saraf')"><span>01</span> Sistem Saraf</button>
+22|        <button class="nav-button" data-section="gerak" data-testid="nav-gerak-button" onclick="showSection('gerak')"><span>02</span> Sistem Gerak</button>
+23|        <button class="nav-button" data-section="alur" data-testid="nav-alur-button" onclick="showSection('alur')"><span>03</span> Alur Gerak</button>
+24|        <button class="nav-button nav-quiz" data-section="kuis" data-testid="nav-kuis-button" onclick="showSection('kuis')"><span>04</span> Kuis Interaktif</button>
+25|    </nav>
+26|
+27|    <main data-testid="main-content">
+28|        <!-- Bagian Sistem Saraf -->
+ [15 lines shown. Remaining: lines 29-85 (57 lines). Use view_range parameter to continue.]
